@@ -15,5 +15,4 @@ SearchDetails.html have a AJAX call to Search.php and SearchName.php for searchi
 In "Enter.php" there is a connection code for database and table and this file takes the input from EnterDetails.html file , all the form data, and saving it to table using MySQL query.<br/>
 And it also check the unique ID whether already present or not. On success it will store the form details into database otherwise shows error "ID already Exists".
 <br/>
-<br/>
 In "Search.php" there is a connection code for database and table and this file takes the input from SearchDetails.html file such as Name or ID. By taking ID as input and on submit it will search from database by using this ID using Query and same can be done by SearchName.
