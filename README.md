@@ -5,5 +5,14 @@ This project contains the following files/folders -
 1. HomePage.html
 2. EnterDetails.html
 3. SearchDetails.html
-4. Enter.php
-5. Search.php and SearchName.php
+4. StyleForm.css
+5. Enter.php
+6. Search.php and SearchName.php
+<br/> <br/> 
+All the HTML,CSS files are used for basic design on webpage (see snapshots of these files attached to this repository).
+<br/>
+EnterDetails.html have JQuery in it to use AJAX call to Enter.php. <br/> <br/>
+In "Enter.php" there is a connection code for database and table and this file takes the input from EnterDetails.html file , all the form data, and saving it to table using MySQL query.<br/>
+And it also check the unique ID whether already present or not. On success it will store the form details into database otherwise shows error "ID already Exists".
+<br/>
+<br/>
