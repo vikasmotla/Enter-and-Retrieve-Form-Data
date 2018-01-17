@@ -1,0 +1,118 @@
+/* CSS Style of EnterDetails.html
+h1
+{
+text-align:center;
+}
+ */
+.Boxed
+{
+  margin-top: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  background-color: #ddd;
+  border-radius:10px;
+  display:inline-block;
+}
+
+.Boxed:hover 
+{
+background-color: #eee;
+}
+
+.Boxed .name, .phone, .gender, .email, .sub_btn, .uid 
+{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 5px;
+  display:inline-block;
+}
+
+.Boxed .addr1
+{
+	position:relative;
+	top:-10px;
+	left:20px;
+	display:inline-block;
+}
+
+.Boxed .addr2
+{
+	position:relative;
+	top:20px;
+	left:60px;
+	margin-bottom: 35px;
+	display:inline-block;	
+}
+
+/* CSS Style of HomePage.html*/ 
+
+#welcome
+{
+font-size:50px;
+}
+
+.img1
+{
+  position:absolute;
+  left:380px;
+  top:200px;
+  cursor: pointer;
+}
+
+.img2
+{
+  position:absolute;
+  left: 780px;
+  top:200px;
+  cursor: pointer;
+}
+
+.img1 .add
+{
+  position:absolute;
+  left:38px;
+  top:200px;
+  font-size:18px;
+}
+.img2 .search
+{
+  position:absolute;
+  left:36px;
+  top:200px;
+  font-size:18px;
+}
+
+.img1 img{
+box-shadow: 1px 1px 10px ;  /*[horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color];*/
+}
+
+.img1 img:hover
+{
+box-shadow: 1px 1px 15px ;
+}
+
+.img2 img{
+box-shadow: 1px 1px 10px ;
+}
+
+.img2 img:hover
+{
+box-shadow: 1px 1px 15px ;
+}
+
+/* CSS Style of SearchDetails.html */
+
+.SearchID{
+float:left;
+margin-left:40px;
+margin-right:20px;
+}
+
+.DisplaySearched
+{
+margin-left:20px;
+}

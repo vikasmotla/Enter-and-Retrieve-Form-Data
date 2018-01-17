@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add</title>
+<link rel="stylesheet" href="StyleForm.css">
+<script type="text/javascript" src="jquery-3.2.1.js"> </script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+$(document).ready(function()
+{
+	$('.Boxed').hide().fadeIn(2000);
+    $('#EnterForm').submit(function()					// submit event from form
+	{												
+	$.ajax({									// create an AJAX call
+    data: $(this).serialize(),					// get the form data
+    type: $(this).attr('method'),				// GET or POST
+    url: $(this).attr('action'),				// call to php file
+    success: function(response)					// on success
+		{ 
+			$('.Submitted').html(response);		// display php result into this div
+	   }
+		});
+		return false;					
+    });
+});
+
+</script>
+
+<h2>Please Fill Details</h2>
+<hr>
+<div class="Boxed">
+
+	<form id="EnterForm" action="Enter.php" method="post">
+		<div class="name">
+			First Name : &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="text" name="FirstName" id="FirstName" size="30" maxlength="30" placeholder="Your first name.." required /> 
+			&nbsp; &nbsp; &nbsp;
+			Last Name :  &nbsp; &nbsp; &nbsp; 
+			<input type="text" name="LastName" id="LastName" size="30" maxlength="30" placeholder="Your last name.."required /> 
+		</div>
+		</br>
+
+		<div class="gender">
+			Gender : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="Gender" id="male" value="male" checked> Male &nbsp;
+			<input type="radio" name="Gender" id="female" value="female"> Female &nbsp;
+			<input type="radio" name="Gender" id="other" value="other"> Other &nbsp;
+		</div>
+		</br>
+
+		<div class="phone">
+			Phone Number : &nbsp;
+			<input type="text" name="PhoneNumber" id="PhoneNumber" maxlength="10" size="30" placeholder="10 digit phone no.."required />
+		</div>
+	    </br>
+
+		<div class="email">
+			Email : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="text" name="Email" id="Email" size="30" maxlength="50" placeholder="Your email address.." required />
+		</div>
+		</br>
+
+		<div class="uid">
+			ID : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+			<input type="text" name="Uid" id="Uid" maxlength="10" size="30" placeholder="Enter unique id.." required />
+		</div>
+	    </br>
+
+		<div class="addr1">
+			<label>Address :</label>
+		</div>
+
+		<div class="addr2">
+				&nbsp; &nbsp;<textarea name="Address" id="Address" rows=4 cols=31 maxlength="150" placeholder="Your complete address.."></textarea>
+		</div>
+		</br>
+	
+		<div class="sub_btn">
+			<label>Submit to save details :</label>
+			<input type="submit" id="sub_btn" value="Submit"/>
+		</div>
+	</form>
+</div>
+
+<div class="Submitted">
+</div>
+
+</body>
+</html>

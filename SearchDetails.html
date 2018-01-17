@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search</title>
+</head>
+
+<link rel="stylesheet" href="StyleForm.css">
+<script type="text/javascript" src="jquery-3.2.1.js"> </script>
+<body>
+
+<script type="text/javascript">
+
+$(document).ready(function()
+{
+$('#SearchFormID').submit(function()					// submit event from form
+	{												
+	$.ajax({									// create an AJAX call
+    data: $(this).serialize(),					// get the form data
+    type: $(this).attr('method'),				// GET or POST
+    url: $(this).attr('action'),				// call to php file
+    success: function(response)					// on success
+		{ 
+			$('.DisplaySearched').html(response);		// display php result into this div
+	   }
+		});
+		return false;					
+    });
+
+   $('#SearchFormName').submit(function()					// submit event from form
+	{												
+	$.ajax({									// create an AJAX call
+    data: $(this).serialize(),					// get the form data
+    type: $(this).attr('method'),				// GET or POST
+    url: $(this).attr('action'),				// call to php file
+    success: function(response)					// on success
+		{ 
+			$('.DisplaySearched').html(response);		// display php result into this div
+	   }
+		});
+		return false;					
+    });
+});
+
+</script>
+
+<h1>Search Details</h1>
+<hr>
+
+<div class="SearchID">
+<h2>Search by ID </h2>
+<form action="Search.php" method="POST" id="SearchFormID"> 
+	<div class="EnterID">
+			Enter ID : &nbsp;
+			<input type="text" name="EnteredID" maxlength="10" size="30" placeholder="Type.." />
+	</div>
+	</br>
+	<label>Submit to fetch details:</label>
+	<input type="submit" name="Submit"/>
+</form>
+</div>
+<div>
+<h2>Search by Name </h2>
+<form action="SearchName.php" method="POST" id="SearchFormName"> 
+	<div class="EnterName">
+			Enter First Name : &nbsp;
+			<input type="text" name="EnteredName" maxlength="10" size="30" placeholder="Type.." />
+	</div>
+	</br>
+	<label>Submit to fetch details:</label>
+	<input type="submit" name="Submit"/>
+</form>
+</div>
+</br>
+<hr>
+<div class="DisplaySearched">
+	<p>Result...</p>
+</div>
+
+</body>
+</html>

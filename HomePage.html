@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Welcome!</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="StyleForm.css">
+<script type="text/javascript" src="jquery-3.2.1.js"> </script>
+
+<script>
+$(document).ready(function(){
+
+	$('.img1').hide().fadeIn(3000);
+	$('.img2').hide().fadeIn(3000);		
+
+	$('.img1').click(function(){
+	window.open("EnterDetails.html");
+	});
+
+	$('.img2').click(function(){
+	window.open("SearchDetails.html");
+	});
+});
+</script>
+
+<body >
+
+<h1 id="welcome" style="text-align:center;">Welcome!</h1>
+<hr>
+<div class="img1">
+     <img id="add_image" src="images/add.png" height="200" width="200" style="border-radius: 50%"/> 
+	 <div class="add">
+			<p class="add_text">ADD DETAILS</p>
+	</div>
+</div>
+<div class="img2">
+     <img  src="images/search.png" height="200" width="200"  style="border-radius: 50%"/>
+	 <div class="search">
+		<p class="search_text">SEARCH DETAILS</p>
+	</div>
+</div>
+</head>
+</body>
+</html>
